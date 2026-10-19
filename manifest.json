@@ -1,0 +1,21 @@
+
+{
+  "name": "MyDictionary",
+  "short_name": "Dictionary",
+  "description": "A simple dictionary with a Word of the Day.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8f7f4",
+  "theme_color": "#344e41",
+  
+"icons": [
+  {
+    "src": "icon.svg",
+    "sizes": "any",
+    "type": "image/svg+xml",
+    "purpose": "any"
+  }
+]
+
+}
