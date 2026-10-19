@@ -1,0 +1,284 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #f8f7f4;
+    color: #252820;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 48px 18px 24px;
+}
+
+.app {
+    width: 100%;
+    max-width: 620px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.logo {
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 16px;
+    display: grid;
+    place-items: center;
+    background: #344e41;
+    color: white;
+    border-radius: 17px;
+    font-family: Georgia, serif;
+    font-size: 30px;
+}
+
+h1 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 7vw, 42px);
+    font-weight: normal;
+}
+
+header p {
+    color: #77786f;
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.search-box {
+    display: flex;
+    gap: 9px;
+    padding: 7px;
+    background: white;
+    border: 1px solid #e3e1da;
+    border-radius: 15px;
+}
+
+input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    padding: 12px 10px;
+    font-size: 16px;
+    background: transparent;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 19px;
+    background: #344e41;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #263b30;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid #779b83;
+    outline-offset: 3px;
+}
+
+#result {
+    margin-top: 28px;
+}
+
+.welcome {
+    text-align: center;
+    padding: 40px 12px;
+}
+
+.book-icon {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    color: #779b83;
+}
+
+.welcome h2 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+.welcome p,
+footer {
+    color: #77786f;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+footer {
+    text-align: center;
+    margin-top: 42px;
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 32px 14px 20px;
+    }
+
+    button {
+        padding: 12px;
+    }
+}
+
+/* Word of the Day card */
+
+.wotd-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 28px;
+    padding: 24px;
+    text-align: left;
+    color: #252820;
+    background: #e8eee5;
+    border: 1px solid #d6e0d2;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wotd-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(52, 78, 65, 0.10);
+}
+
+.wotd-label {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    color: #58715d;
+}
+
+.wotd-title {
+    margin-top: 12px;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: normal;
+}
+
+#wotd-preview {
+    margin-top: 8px;
+    font-size: 15px;
+    color: #59675a;
+}
+
+.wotd-action {
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #344e41;
+}
+
+/* Word of the Day detail screen */
+
+#main-view,
+#wotd-view {
+    width: 100%;
+}
+
+#main-view[hidden],
+#wotd-view[hidden] {
+    display: none;
+}
+
+.back-button {
+    background: transparent;
+    color: #344e41;
+    padding: 8px 0;
+    margin-bottom: 28px;
+}
+
+.back-button:hover {
+    background: transparent;
+    color: #58715d;
+}
+
+.daily-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.daily-heading h1 {
+    margin-top: 12px;
+}
+
+#wotd-date {
+    color: #77786f;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.wotd-detail {
+    padding: 25px;
+    background: white;
+    border: 1px solid #e3e1da;
+    border-radius: 18px;
+    overflow-wrap: anywhere;
+}
+
+.wotd-detail h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.wotd-detail h3 {
+    color: #58715d;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 24px;
+}
+
+.wotd-detail p {
+    line-height: 1.8;
+}
+
+.wotd-pronunciation {
+    color: #77786f;
+    font-size: 14px;
+}
+
+.wotd-example {
+    color: #77786f;
+    font-style: italic;
+    padding-left: 14px;
+    border-left: 3px solid #d6e0d2;
+}
+
+.try-word-button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 15px;
+}
+
+@media (max-width: 400px) {
+    .wotd-card {
+        padding: 20px;
+    }
+
+    .wotd-detail {
+        padding: 20px;
+    }
+}

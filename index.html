@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f8f7f4">
+    <title>My Dictionary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+
+        <!-- Main dictionary screen -->
+        <div id="main-view">
+            <header>
+                <div class="logo">D</div>
+                <h1>My Dictionary</h1>
+                <p>Your little corner of words.</p>
+            </header>
+
+            <form id="search-form">
+                <label for="word-input">Find a word</label>
+                <div class="search-box">
+                    <input
+                        type="text"
+                        id="word-input"
+                        placeholder="Enter an English word..."
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+
+            <section id="result" aria-live="polite">
+                <div class="welcome">
+                    <div class="book-icon">Aa</div>
+                    <h2>A world of words awaits.</h2>
+                    <p>Search for a word to discover its meaning.</p>
+                </div>
+            </section>
+
+            <!-- Word of the Day card -->
+            <button type="button" id="wotd-card" class="wotd-card">
+                <span class="wotd-label">YOUR DAILY DOSE OF VOCABULARY</span>
+                <span class="wotd-title">Word of the Day</span>
+                <span id="wotd-preview">Discover today's word →</span>
+                <span class="wotd-action">Tap to explore ↗</span>
+            </button>
+
+            <footer>Made with curiosity &hearts;</footer>
+        </div>
+
+        <!-- Separate Word of the Day screen -->
+        <section id="wotd-view" hidden>
+            <button type="button" id="back-button" class="back-button">
+                ← Back to dictionary
+            </button>
+
+            <div class="daily-heading">
+                <div class="book-icon">Aa</div>
+                <p class="wotd-label">YOUR DAILY DOSE OF VOCABULARY</p>
+                <h1>Word of the Day</h1>
+                <p id="wotd-date"></p>
+            </div>
+
+            <article id="wotd-detail" class="wotd-detail" aria-live="polite">
+                <p>Discovering your word...</p>
+            </article>
+
+            <button type="button" id="try-word-button" class="try-word-button">
+                Search this word
+            </button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
